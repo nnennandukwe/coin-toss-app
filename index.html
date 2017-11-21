@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Coin Tosser</title>
-  </head>
-  <body>
-<h1>Coin Tosser</h1>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="one, two, three">
+        <title>Coin Tosser!</title>
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+    <body>
+        <button id="heads" type="button" name="button">Heads</button>
+        <button id="tails" type="button" name="button">Tails</button>
+        <span></span>
+        <script type="text/javascript">
+        const max = 3
+        const min = 1
+         $("#heads").on("click", function(){
+             let headFlip = parseInt(Math.random() * (max - min) + min);
+             if (headFlip == 1) {
+                 $("span").text("Yes it was Heads!! You won!")
+             }else {
+                $("span").text("Sorry, It was Tails! You Lose!")
+             }
+         });
+         $("#tails").on("click", function(){
+             let tailsFlip = parseInt(Math.random() * (max - min) + min);
+             if (tailsFlip == 2) {
+                 $("span").text("Yes it was Tails!! You won!")
+             }else {
+                $("span").text("Sorry, It was Heads! You Lose!")
+             }
+         });
+        </script>
+    <script type="text/javascript" src="node.js">
+    </script>
+    </body>
 </html>
